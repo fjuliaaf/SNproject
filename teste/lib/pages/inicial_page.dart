@@ -1,0 +1,82 @@
+import 'package:flutter/material.dart';
+import 'package:teste/pages/entrar_page.dart';
+
+class InicialPage extends StatefulWidget {
+  const InicialPage({Key? key}) : super(key: key);
+
+  @override
+  _InicialPageState createState() => _InicialPageState();
+}
+
+class _InicialPageState extends State<InicialPage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: false,
+        backgroundColor: const Color(0xFFA7AED3),
+        title: const Text(
+          'Science Notes',
+          style: TextStyle(fontSize: 24, color: Colors.white, fontFamily: 'Staatliches'),
+        ),
+      ),
+      backgroundColor: const Color(0xFFDFE9F5),
+      body: Center(
+        child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 48.0, horizontal: 32.0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                      Image.network("https://kultivi.com/wp-content/uploads/2019/07/tecnicas-de-estudo-Kultivi.jpg"),
+                      const SizedBox(height: 40),
+                      Row(children: [
+                        ElevatedButton(
+                          onPressed: onPressedButton,
+                          child: const Text(
+                            'Entrar',
+                            style: TextStyle(
+                              fontSize: 26,
+                              color: Colors.white,
+                              fontFamily: 'AmaticSC-Regular',
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xFFA7AED3),
+                          ),
+                        ),
+                        SizedBox(width: 26),
+                        ElevatedButton(
+                          onPressed: onPressedButton,
+                          child: const Text(
+                            'Cadastrar',
+                            style: TextStyle(
+                              fontSize: 26,
+                              color: Colors.white,
+                              fontFamily: 'AmaticSC-Regular',
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                            primary: Color(0xFFA7AED3),
+                          ),
+                        ),
+                      ],
+                      ),
+                ],
+            ),
+        ),
+      ),
+    );
+  }
+
+  void onPressedButton() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) {
+          return const EntrarPage();
+        },
+      ),
+    );
+  }
+
+}
