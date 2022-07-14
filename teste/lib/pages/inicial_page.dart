@@ -29,7 +29,6 @@ class _InicialPageState extends State<InicialPage> {
                 children: [
                       Image.network("https://kultivi.com/wp-content/uploads/2019/07/tecnicas-de-estudo-Kultivi.jpg"),
                       const SizedBox(height: 40),
-                      Row(children: [
                         ElevatedButton(
                           onPressed: onPressedButton,
                           child: const Text(
@@ -44,27 +43,10 @@ class _InicialPageState extends State<InicialPage> {
                             primary: Color(0xFFA7AED3),
                           ),
                         ),
-                        SizedBox(width: 26),
-                        ElevatedButton(
-                          onPressed: onPressedButton,
-                          child: const Text(
-                            'Cadastrar',
-                            style: TextStyle(
-                              fontSize: 26,
-                              color: Colors.white,
-                              fontFamily: 'AmaticSC-Regular',
-                            ),
-                          ),
-                          style: ElevatedButton.styleFrom(
-                            primary: Color(0xFFA7AED3),
-                          ),
-                        ),
                       ],
                       ),
-                ],
             ),
         ),
-      ),
     );
   }
 
